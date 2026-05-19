@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ - Explore India</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:'Segoe UI',sans-serif;
+            background:linear-gradient(135deg,#ffecd2,#fcb69f);
+            overflow-x:hidden;
+        }
+
+        /* HEADER */
+
+        header{
+            background:linear-gradient(45deg,#ff6f61,#ff9966);
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            background:#222;
+            padding:15px;
+            text-align:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#ff9966;
+        }
+
+        /* HERO */
+
+        .hero{
+            height:40vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url('https://picsum.photos/1600/900?questions') center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            color:white;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:55px;
+            margin:0;
+        }
+
+        .hero p{
+            font-size:22px;
+        }
+
+        /* FAQ SECTION */
+
+        .faq-container{
+            width:80%;
+            margin:60px auto;
+        }
+
+        .faq-box{
+            background:rgba(255,255,255,0.9);
+            margin-bottom:20px;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,0.15);
+            transition:0.3s;
+        }
+
+        .faq-box:hover{
+            transform:scale(1.02);
+        }
+
+        .question{
+            padding:25px;
+            font-size:20px;
+            font-weight:bold;
+            cursor:pointer;
+            position:relative;
+            color:#333;
+        }
+
+        .question::after{
+            content:'+';
+            position:absolute;
+            right:30px;
+            font-size:28px;
+            transition:0.3s;
+        }
+
+        .faq-box.active .question::after{
+            content:'−';
+        }
+
+        .answer{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.4s ease;
+            background:#fff;
+            padding:0 25px;
+        }
+
+        .answer p{
+            padding:20px 0;
+            line-height:1.7;
+            color:#555;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:40px;
+            }
+
+            .faq-container{
+                width:92%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore India 🌍</h1>
+    <p>Travel • Discover • Experience</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="#">Blog</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything You Need To Know</p>
+
+</section>
+
+<!-- FAQ SECTION -->
+
+<div class="faq-container">
+
+    <div class="faq-box">
+
+        <div class="question">
+            What is the best time to visit India?
+        </div>
+
+        <div class="answer">
+            <p>
+                October to March is considered the best season
+                to travel across most parts of India due to pleasant weather.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-box">
+
+        <div class="question">
+            Is traveling in India affordable?
+        </div>
+
+        <div class="answer">
+            <p>
+                Yes! India offers many budget-friendly hotels,
+                transport options, and food choices for travelers.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-box">
+
+        <div class="question">
+            Which are the most popular destinations?
+        </div>
+
+        <div class="answer">
+            <p>
+                Goa, Manali, Kerala, Kashmir, Jaipur,
+                and Varanasi are among the most visited places.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-box">
+
+        <div class="question">
+            Is online booking available?
+        </div>
+
+        <div class="answer">
+            <p>
+                Yes, most hotels, flights, and travel packages
+                can be booked online easily.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-box">
+
+        <div class="question">
+            Is India safe for solo travelers?
+        </div>
+
+        <div class="answer">
+            <p>
+                India is generally safe if proper precautions
+                and travel guidelines are followed.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>© 2026 Explore India | Designed by You 😎</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    const faqBoxes = document.querySelectorAll(".faq-box");
+
+    faqBoxes.forEach(box => {
+
+        box.addEventListener("click", () => {
+
+            box.classList.toggle("active");
+
+            const answer = box.querySelector(".answer");
+
+            if(answer.style.maxHeight){
+                answer.style.maxHeight = null;
+            }
+            else{
+                answer.style.maxHeight =
+                answer.scrollHeight + "px";
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

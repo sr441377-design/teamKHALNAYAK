@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Explore India</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:'Segoe UI',sans-serif;
+            background:#f4f6f9;
+            overflow-x:hidden;
+        }
+
+        /* HEADER */
+
+        header{
+            background:linear-gradient(45deg,#ff6f61,#ff9966);
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            background:#222;
+            padding:15px;
+            text-align:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#ff9966;
+        }
+
+        /* HERO */
+
+        .hero{
+            height:50vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url('https://picsum.photos/1600/900?city') center/cover;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+            color:white;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:55px;
+            margin:0;
+        }
+
+        .hero p{
+            font-size:22px;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact-section{
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            gap:40px;
+            padding:60px 10%;
+            flex-wrap:wrap;
+        }
+
+        /* CONTACT INFO */
+
+        .contact-info{
+            flex:1;
+            min-width:300px;
+        }
+
+        .info-box{
+            background:white;
+            padding:25px;
+            margin-bottom:20px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.4s;
+        }
+
+        .info-box:hover{
+            transform:translateY(-10px);
+        }
+
+        .info-box h3{
+            margin-top:0;
+            color:#ff6f61;
+        }
+
+        /* FORM */
+
+        .contact-form{
+            flex:1;
+            min-width:320px;
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:15px;
+            margin:10px 0;
+            border:none;
+            border-radius:10px;
+            background:#f1f1f1;
+            font-size:16px;
+        }
+
+        textarea{
+            resize:none;
+            height:120px;
+        }
+
+        button{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:30px;
+            background:linear-gradient(45deg,#ff6f61,#ff9966);
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.03);
+        }
+
+        /* MAP SECTION */
+
+        .map{
+            margin:50px auto;
+            width:80%;
+            height:350px;
+            border-radius:25px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .map img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px){
+
+            .hero h1{
+                font-size:40px;
+            }
+
+            .contact-section{
+                flex-direction:column;
+            }
+
+            .map{
+                width:95%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore India 🌍</h1>
+    <p>Travel • Discover • Experience</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Destinations</a>
+    <a href="#">Blog</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Contact Us</h1>
+    <p>We'd Love To Hear From You</p>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+    <!-- LEFT SIDE -->
+
+    <div class="contact-info">
+
+        <div class="info-box">
+            <h3>📍 Address</h3>
+            <p>Bangalore, Karnataka, India</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📞 Phone</h3>
+            <p>+91 9876543210</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📧 Email</h3>
+            <p>exploreindia@gmail.com</p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="contact-form">
+
+        <h2>Send Message</h2>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- MAP -->
+
+<div class="map">
+
+    <img src="https://picsum.photos/1600/600?map">
+
+</div>
+
+<footer>
+
+    <p>© 2026 Explore India | Designed by You 😎</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    // Button Click Alert
+
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        alert("Message Sent Successfully!");
+
+    });
+
+</script>
+
+</body>
+</html>
