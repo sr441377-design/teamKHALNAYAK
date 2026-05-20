@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jaipur - Explore India</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#fff4eb;
+            overflow-x:hidden;
+        }
+
+        /* HEADER */
+
+        header{
+            background:linear-gradient(45deg,#ff9966,#ff5e62);
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            background:#222;
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            padding:15px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#ff9966;
+        }
+
+        /* HERO */
+
+        .hero{
+            height:90vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url('https://picsum.photos/1600/900?jaipur,palace')
+            center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            color:white;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:70px;
+        }
+
+        .hero p{
+            font-size:24px;
+            margin-top:10px;
+        }
+
+        /* SECTION */
+
+        section{
+            padding:70px 10%;
+        }
+
+        /* ABOUT */
+
+        .about{
+            display:flex;
+            gap:40px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        .about img{
+            width:45%;
+            border-radius:20px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .about-text{
+            flex:1;
+        }
+
+        .about-text h2{
+            font-size:45px;
+            color:#ff5e62;
+            margin-bottom:20px;
+        }
+
+        .about-text p{
+            line-height:1.8;
+            color:#444;
+        }
+
+        /* CARDS */
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+            margin-top:50px;
+        }
+
+        .card{
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:230px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            color:#ff5e62;
+            margin-bottom:10px;
+        }
+
+        /* GALLERY */
+
+        .gallery{
+            columns:3 250px;
+            column-gap:18px;
+            margin-top:40px;
+        }
+
+        .gallery img{
+            width:100%;
+            margin-bottom:18px;
+            border-radius:20px;
+            transition:0.4s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.03);
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px){
+
+            .hero h1{
+                font-size:45px;
+            }
+
+            .about{
+                flex-direction:column;
+            }
+
+            .about img{
+                width:100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore India 🌍</h1>
+    <p>Travel • Discover • Experience</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Welcome To Jaipur</h1>
+
+    <p>Culture • Heritage • Royalty</p>
+
+</section>
+
+<!-- ABOUT -->
+
+<section>
+
+    <div class="about">
+
+        <img src="https://picsum.photos/700/500?jaipur">
+
+        <div class="about-text">
+
+            <h2>About Jaipur</h2>
+
+            <p>
+                Jaipur, also known as the Pink City,
+                is famous for its royal palaces,
+                colorful markets, and rich culture.
+            </p>
+
+            <p>
+                It is one of the most visited tourist
+                destinations in Rajasthan and India.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PLACES -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?hawamahal">
+
+            <div class="card-content">
+
+                <h3>Hawa Mahal</h3>
+
+                <p>
+                    Iconic palace with beautiful windows
+                    and architecture.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?fort">
+
+            <div class="card-content">
+
+                <h3>Amber Fort</h3>
+
+                <p>
+                    Historic fort with stunning views
+                    and royal interiors.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?market">
+
+            <div class="card-content">
+
+                <h3>Local Markets</h3>
+
+                <p>
+                    Famous for handicrafts, jewelry,
+                    and colorful textiles.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- GALLERY -->
+
+    <div class="gallery">
+
+        <img src="https://picsum.photos/500/700?jaipur,palace">
+
+        <img src="https://picsum.photos/500/650?rajasthan">
+
+        <img src="https://picsum.photos/500/720?india,fort">
+
+        <img src="https://picsum.photos/500/680?culture">
+
+        <img src="https://picsum.photos/500/600?camel">
+
+        <img src="https://picsum.photos/500/730?heritage">
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Explore India | Designed by You 😎</p>
+
+</footer>
+
+</body>
+</html>
