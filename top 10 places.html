@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 10 Places In India - Explore India</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#0f172a;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        /* GLOW EFFECTS */
+
+        .glow1{
+            position:fixed;
+            width:350px;
+            height:350px;
+            background:#f97316;
+            border-radius:50%;
+            filter:blur(120px);
+            top:-100px;
+            left:-100px;
+            z-index:-1;
+        }
+
+        .glow2{
+            position:fixed;
+            width:350px;
+            height:350px;
+            background:#3b82f6;
+            border-radius:50%;
+            filter:blur(120px);
+            bottom:-100px;
+            right:-100px;
+            z-index:-1;
+        }
+
+        /* HEADER */
+
+        header{
+            text-align:center;
+            padding:25px;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
+
+        header h1{
+            font-size:45px;
+        }
+
+        header p{
+            color:#ddd;
+            margin-top:10px;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            padding:18px;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#f97316;
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:90vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            padding:50px;
+            background:
+            linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url('https://picsum.photos/1600/900?india,travel')
+            center/cover;
+        }
+
+        .hero h2{
+            font-size:75px;
+            margin-bottom:20px;
+            color:#f97316;
+        }
+
+        .hero p{
+            max-width:850px;
+            line-height:1.9;
+            font-size:20px;
+            color:#eee;
+        }
+
+        .hero button{
+            margin-top:30px;
+            padding:15px 35px;
+            border:none;
+            border-radius:40px;
+            background:#f97316;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .hero button:hover{
+            transform:scale(1.08);
+        }
+
+        /* PLACES */
+
+        .places{
+            padding:80px 8%;
+        }
+
+        .places h2{
+            text-align:center;
+            font-size:55px;
+            margin-bottom:50px;
+            color:#f97316;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:35px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+            border-radius:25px;
+            overflow:hidden;
+            transition:0.4s;
+            box-shadow:0 5px 20px rgba(0,0,0,0.3);
+            position:relative;
+        }
+
+        .card:hover{
+            transform:translateY(-12px);
+        }
+
+        .card img{
+            width:100%;
+            height:240px;
+            object-fit:cover;
+            transition:0.4s;
+        }
+
+        .card:hover img{
+            transform:scale(1.08);
+        }
+
+        .number{
+            position:absolute;
+            top:15px;
+            left:15px;
+            background:#f97316;
+            color:white;
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-weight:bold;
+            font-size:20px;
+        }
+
+        .card-content{
+            padding:22px;
+        }
+
+        .card-content h3{
+            margin-bottom:12px;
+            color:#f97316;
+        }
+
+        .card-content p{
+            line-height:1.8;
+            color:#ddd;
+        }
+
+        /* PHOTO STRIP */
+
+        .gallery{
+            padding:40px;
+            display:flex;
+            gap:20px;
+            overflow-x:auto;
+        }
+
+        .gallery img{
+            width:340px;
+            height:230px;
+            object-fit:cover;
+            border-radius:20px;
+            transition:0.4s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.05);
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#bbb;
+            margin-top:40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .hero h2{
+                font-size:45px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="glow1"></div>
+<div class="glow2"></div>
+
+<header>
+    <h1>Explore India 🌍</h1>
+    <p>Travel • Discover • Experience</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="top10places.html">Top Places</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h2>Top 10 Places In India</h2>
+
+    <p>
+        Discover India's most beautiful destinations
+        filled with mountains, beaches, culture,
+        history, and unforgettable experiences.
+    </p>
+
+    <button onclick="explorePlaces()">
+        Explore Destinations
+    </button>
+
+</section>
+
+<!-- PLACES -->
+
+<section class="places">
+
+    <h2>Must Visit Destinations</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="number">1</div>
+            <img src="https://picsum.photos/500/400?goa">
+            <div class="card-content">
+                <h3>Goa</h3>
+                <p>Famous for beaches, nightlife, and water sports.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">2</div>
+            <img src="https://picsum.photos/500/400?manali">
+            <div class="card-content">
+                <h3>Manali</h3>
+                <p>Snow-covered mountains and adventure activities.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">3</div>
+            <img src="https://picsum.photos/500/400?jaipur">
+            <div class="card-content">
+                <h3>Jaipur</h3>
+                <p>Royal palaces, forts, and colorful markets.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">4</div>
+            <img src="https://picsum.photos/500/400?kerala">
+            <div class="card-content">
+                <h3>Kerala</h3>
+                <p>Backwaters, tea plantations, and greenery.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">5</div>
+            <img src="https://picsum.photos/500/400?kashmir">
+            <div class="card-content">
+                <h3>Kashmir</h3>
+                <p>Paradise on Earth with valleys and lakes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">6</div>
+            <img src="https://picsum.photos/500/400?varanasi">
+            <div class="card-content">
+                <h3>Varanasi</h3>
+                <p>Spiritual city known for Ganga Aarti and temples.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">7</div>
+            <img src="https://picsum.photos/500/400?delhi">
+            <div class="card-content">
+                <h3>Delhi</h3>
+                <p>Historic monuments and famous street food.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">8</div>
+            <img src="https://picsum.photos/500/400?ooty">
+            <div class="card-content">
+                <h3>Ooty</h3>
+                <p>Beautiful hill station with tea gardens.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">9</div>
+            <img src="https://picsum.photos/500/400?mumbai">
+            <div class="card-content">
+                <h3>Mumbai</h3>
+                <p>City of dreams with nightlife and Marine Drive.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="number">10</div>
+            <img src="https://picsum.photos/500/400?andaman">
+            <div class="card-content">
+                <h3>Andaman</h3>
+                <p>Crystal clear beaches and island adventures.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PHOTO STRIP -->
+
+<div class="gallery">
+
+    <img src="https://picsum.photos/500/400?travel">
+
+    <img src="https://picsum.photos/500/400?beach">
+
+    <img src="https://picsum.photos/500/400?mountains">
+
+    <img src="https://picsum.photos/500/400?india">
+
+    <img src="https://picsum.photos/500/400?culture">
+
+    <img src="https://picsum.photos/500/400?nature">
+
+</div>
+
+<footer>
+
+    <p>© 2026 Explore India | Designed by You 😎</p>
+
+</footer>
+
+<script>
+
+    function explorePlaces(){
+
+        alert("Start Exploring Incredible India 🌍");
+
+    }
+
+</script>
+
+</body>
+</html>
