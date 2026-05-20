@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Guide - Explore India</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#0f172a;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        /* GLOW EFFECTS */
+
+        .glow1{
+            position:fixed;
+            width:350px;
+            height:350px;
+            background:#ff6b35;
+            border-radius:50%;
+            filter:blur(120px);
+            top:-100px;
+            left:-100px;
+            z-index:-1;
+        }
+
+        .glow2{
+            position:fixed;
+            width:350px;
+            height:350px;
+            background:#facc15;
+            border-radius:50%;
+            filter:blur(120px);
+            bottom:-100px;
+            right:-100px;
+            z-index:-1;
+        }
+
+        /* HEADER */
+
+        header{
+            text-align:center;
+            padding:25px;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
+
+        header h1{
+            font-size:45px;
+        }
+
+        header p{
+            color:#ddd;
+            margin-top:10px;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            padding:18px;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#facc15;
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:85vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            padding:50px;
+        }
+
+        .hero h2{
+            font-size:75px;
+            margin-bottom:20px;
+            color:#facc15;
+        }
+
+        .hero p{
+            max-width:800px;
+            line-height:1.9;
+            font-size:20px;
+            color:#ddd;
+        }
+
+        .hero button{
+            margin-top:30px;
+            padding:15px 35px;
+            border:none;
+            border-radius:40px;
+            background:#facc15;
+            color:#111;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .hero button:hover{
+            transform:scale(1.08);
+        }
+
+        /* FOOD SECTION */
+
+        .foods{
+            padding:80px 8%;
+        }
+
+        .foods h2{
+            text-align:center;
+            font-size:50px;
+            margin-bottom:50px;
+            color:#facc15;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+            border-radius:25px;
+            overflow:hidden;
+            transition:0.4s;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .card:hover{
+            transform:translateY(-12px);
+        }
+
+        .card img{
+            width:100%;
+            height:240px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            margin-bottom:10px;
+            color:#facc15;
+        }
+
+        .card-content p{
+            color:#ddd;
+            line-height:1.7;
+        }
+
+        /* GALLERY STRIP */
+
+        .gallery{
+            padding:40px;
+            display:flex;
+            gap:20px;
+            overflow-x:auto;
+        }
+
+        .gallery img{
+            width:320px;
+            height:220px;
+            object-fit:cover;
+            border-radius:20px;
+            transition:0.4s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.05);
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#bbb;
+            margin-top:40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .hero h2{
+                font-size:45px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="glow1"></div>
+<div class="glow2"></div>
+
+<header>
+    <h1>Explore India 🌍</h1>
+    <p>Travel • Discover • Experience</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="foodguide.html">Food Guide</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h2>Indian Food Guide</h2>
+
+    <p>
+        Explore the rich flavors of India through
+        delicious street food, spicy curries,
+        traditional sweets, and regional cuisines.
+    </p>
+
+    <button onclick="showFood()">
+        Explore Foods
+    </button>
+
+</section>
+
+<!-- FOOD CARDS -->
+
+<section class="foods">
+
+    <h2>Popular Indian Foods</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?biryani">
+
+            <div class="card-content">
+
+                <h3>Hyderabadi Biryani</h3>
+
+                <p>
+                    Famous spicy rice dish cooked with
+                    aromatic spices and meat.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?dosa">
+
+            <div class="card-content">
+
+                <h3>Masala Dosa</h3>
+
+                <p>
+                    Crispy South Indian dosa served
+                    with chutney and sambar.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?panipuri">
+
+            <div class="card-content">
+
+                <h3>Pani Puri</h3>
+
+                <p>
+                    India's most loved spicy and tangy
+                    street food snack.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?butterchicken">
+
+            <div class="card-content">
+
+                <h3>Butter Chicken</h3>
+
+                <p>
+                    Creamy North Indian curry served
+                    with naan or rice.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?sweets">
+
+            <div class="card-content">
+
+                <h3>Indian Sweets</h3>
+
+                <p>
+                    Gulab Jamun, Rasmalai, and Jalebi
+                    are famous desserts across India.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://picsum.photos/500/400?seafood">
+
+            <div class="card-content">
+
+                <h3>Goan Seafood</h3>
+
+                <p>
+                    Delicious seafood dishes with
+                    coastal Indian flavors.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOD GALLERY -->
+
+<div class="gallery">
+
+    <img src="https://picsum.photos/500/400?food">
+
+    <img src="https://picsum.photos/500/400?restaurant">
+
+    <img src="https://picsum.photos/500/400?streetfood">
+
+    <img src="https://picsum.photos/500/400?indianfood">
+
+    <img src="https://picsum.photos/500/400?dessert">
+
+    <img src="https://picsum.photos/500/400?curry">
+
+</div>
+
+<footer>
+
+    <p>© 2026 Explore India | Designed by You 😎</p>
+
+</footer>
+
+<script>
+
+    function showFood(){
+
+        alert("Get Ready To Taste India 🍛");
+
+    }
+
+</script>
+
+</body>
+</html>
